@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #d4af37, #000000); /* Degradado dorado a negro */
+  margin: 0; /* Eliminar márgenes por defecto */
+  height: 100vh; /* Asegurarse de que el fondo cubra toda la altura de la ventana */
+  display: flex; /* Usar flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.calificacion-container {
+  padding: 20px;
+  border: 2px solid black; /* Borde negro */
+  border-radius: 10px; /* Bordes redondeados */
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el contenedor */
+}
+
+h1 {
+  margin-bottom: 20px; /* Espacio debajo del h1 */
+  color: white; /* Color del texto en blanco para mejor contraste */
+}
+
+.estrellas {
+  direction: rtl; /* Para que la primera estrella sea la más a la izquierda */
+  display: inline-block;
+}
+
+.estrellas input {
+  display: none; /* Ocultar los inputs de tipo radio */
+}
+
+.estrellas label {
+  font-size: 50px; /* Tamaño de las estrellas */
+  color: lightgray; /* Color por defecto de las estrellas */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre las estrellas */
+  transition: color 0.2s ease; /* Suavizar el cambio de color */
+}
+
+.estrellas input:checked ~ label {
+  color: gold; /* Color dorado para las estrellas seleccionadas */
+}
+
+.estrellas label:hover,
+.estrellas label:hover ~ label {
+  color: gold; /* Color dorado al pasar el mouse sobre las estrellas */
+}
+
+.estrellas input:checked + label:hover,
+.estrellas input:checked + label:hover ~ label {
+  color: gold; /* Mantener el color dorado si se selecciona una estrella y se pasa el mouse sobre ella */
+}
+
+/* Efecto de sombra para las estrellas */
+.estrellas label {
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.7); /* Sombra dorada */
+}
+
+.estrellas label:hover {
+  transform: scale(1.2); /* Aumentar el tamaño de la estrella al pasar el mouse */
+  transition: transform 0.2s ease; /* Suavizar la animación de aumento */
+}
+
+.regreso {
+  --glow-color: rgba(255, 215, 0, 0.8); /* Color dorado más suave */
+  --glow-spread-color: rgba(255, 215, 0, 0.5); /* Sombra dorada más suave */
+  --enhanced-glow-color: rgba(255, 215, 0, 0.9); /* Color dorado más brillante */
+  --btn-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: white; /* Cambiar el color del texto a blanco para mejor contraste */
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+              0 0 4em 1em var(--glow-spread-color),
+              inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: absolute; 
+  top: 20px; 
+  left: 20px; 
+  z-index: 2; 
+  transition: all 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}

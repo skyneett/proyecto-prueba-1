@@ -1,0 +1,135 @@
+
+body {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    min-height: 100vh;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: linear-gradient(to bottom, #146409, #000000);
+    text-align: center;
+}
+
+
+header, main, footer {
+    width: 100%;
+    max-width: 1200px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(to bottom, #022546, #000000);
+    padding: 20px 30px; 
+    border-radius: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+nav .logo img {
+    height: 130px;
+    width: auto;
+    border-radius: 50px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li {
+    position: relative;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+
+nav .nav-links .dropdown .dropdown {
+    display: none; 
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+    
+
+nav .nav-links li:hover .dropdown {
+    display: block; 
+}
+
+.dropdown a {
+    color: #333; 
+    padding: 12px 16px; 
+    text-decoration: none; 
+    display: block; 
+}
+
+.dropdown a:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+.search-form {
+    display: flex; 
+    align-items: center; 
+    margin-left: auto; 
+}
+
+.search-form input[type="text"] {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px 0 0 5px; 
+    font-size: 16px; 
+    outline: none; 
+    transition: border-color 0.3s; 
+}
+
+.search-form input[type="text"]:focus {
+    border-color: #007BFF; 
+}
+
+.search-form button {
+    padding: 10px 15px; 
+    border: none; 
+    background-color: #007BFF; 
+    color: white; 
+    border-radius: 0 5px 5px 0; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.search-form button:hover {
+    background-color: #0056b3; 
+}
+
